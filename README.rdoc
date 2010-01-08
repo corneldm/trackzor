@@ -1,0 +1,12 @@
+= Quick Start
+
+Add "trackzored" to your model. By convention, any attribute that also has [ATTR]_updated_at or [ATTR]_updated_by will be tracked. If [ATTR]_updated_by is present, it is required by a validator.
+
+Use the trackzor_migration generator to quickly add columns:
+<tt>script/generate trackzor_migration User email phone_number</tt>
+This will create a migration for adding email_updated_at, email_updated_by, phone_number_updated_at, and phone_number_updated_by columns.
+
+To set the current user:
+<tt>Trackzor.as_user(user_obj) do
+  ...
+end</tt>
