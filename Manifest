@@ -1,6 +1,6 @@
 CHANGELOG
 Manifest
-README
+README.rdoc
 Rakefile
 generators/trackzor_migration/templates/migration.rb
 generators/trackzor_migration/trackzor_migration_generator.rb
@@ -17,3 +17,4 @@ pkg/trackzor-0.1.0/generators/trackzor_migration/trackzor_migration_generator.rb
 pkg/trackzor-0.1.0/init.rb
 pkg/trackzor-0.1.0/lib/trackzor.rb
 pkg/trackzor-0.1.0/trackzor.gemspec
+trackzor.gemspec

@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.date = %q{2010-01-08}
   s.description = %q{Track ATTR_updated_at and ATTR_updated_by with ease.}
   s.email = %q{david.cornelius@bluefishwireless.net}
-  s.extra_rdoc_files = ["CHANGELOG", "README", "lib/trackzor.rb"]
-  s.files = ["CHANGELOG", "Manifest", "README", "Rakefile", "generators/trackzor_migration/templates/migration.rb", "generators/trackzor_migration/trackzor_migration_generator.rb", "init.rb", "lib/trackzor.rb", "pkg/trackzor-0.1.0.gem", "pkg/trackzor-0.1.0.tar.gz", "pkg/trackzor-0.1.0/CHANGELOG", "pkg/trackzor-0.1.0/Manifest", "pkg/trackzor-0.1.0/README.rdoc", "pkg/trackzor-0.1.0/Rakefile", "pkg/trackzor-0.1.0/generators/trackzor_migration/templates/migration.rb", "pkg/trackzor-0.1.0/generators/trackzor_migration/trackzor_migration_generator.rb", "pkg/trackzor-0.1.0/init.rb", "pkg/trackzor-0.1.0/lib/trackzor.rb", "pkg/trackzor-0.1.0/trackzor.gemspec", "trackzor.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/trackzor.rb"]
+  s.files = ["CHANGELOG", "Manifest", "README.rdoc", "Rakefile", "generators/trackzor_migration/templates/migration.rb", "generators/trackzor_migration/trackzor_migration_generator.rb", "init.rb", "lib/trackzor.rb", "pkg/trackzor-0.1.0.gem", "pkg/trackzor-0.1.0.tar.gz", "pkg/trackzor-0.1.0/CHANGELOG", "pkg/trackzor-0.1.0/Manifest", "pkg/trackzor-0.1.0/README.rdoc", "pkg/trackzor-0.1.0/Rakefile", "pkg/trackzor-0.1.0/generators/trackzor_migration/templates/migration.rb", "pkg/trackzor-0.1.0/generators/trackzor_migration/trackzor_migration_generator.rb", "pkg/trackzor-0.1.0/init.rb", "pkg/trackzor-0.1.0/lib/trackzor.rb", "pkg/trackzor-0.1.0/trackzor.gemspec", "trackzor.gemspec"]
   s.homepage = %q{http://bitbucket.org/corneldm/trackzor}
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Trackzor", "--main", "README"]
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Trackzor", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{trackzor}
   s.rubygems_version = %q{1.3.5}
