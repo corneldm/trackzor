@@ -1,12 +1,24 @@
-= Quick Start
+== Setup
 
-Add "trackzored" to your model. By convention, any attribute that also has [ATTR]_updated_at or [ATTR]_updated_by will be tracked. If [ATTR]_updated_by is present, it is required by a validator.
+Add "trackzored" to your model. By convention, any attribute that also has [ATTR]_updated_at or [ATTR]_updated_by will be maintained.
+You can optionally specify :only and :except if this convention steps on your toes --
+:except => :status would skip the check and update of status_updated_at and status_updated_by.
+If [ATTR]_updated_by is present, it is required by a validator.
 
 Use the trackzor_migration generator to quickly add columns:
   script/generate trackzor_migration User email phone_number
 This will create a migration for adding email_updated_at, email_updated_by, phone_number_updated_at, and phone_number_updated_by columns.
 
+== Usage
+
 To set the current user:
   Trackzor.as_user(user_obj) do
     ...
   end
+
+Or, if you're also using acts_as_audited, its as_user method is supported:
+  Audit.as_user(user_obj) do
+    ...
+  end
+
+For each trackzored [ATTR]_updated_by column, a belongs_to association (:[ATTR]_source) is added to link to the user.
