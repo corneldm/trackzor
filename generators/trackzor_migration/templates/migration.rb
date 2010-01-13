@@ -1,7 +1,7 @@
 class Trackzorify<%= class_name.pluralize %> < ActiveRecord::Migration
   def self.up<% args.each do |arg| %>
     add_column :<%= table_name %>, :<%= "#{arg}_updated_at" %>, :datetime
-    add_column :<%= table_name %>, :<%= "#{arg}_updated_by" %>, :string<% end %>
+    add_column :<%= table_name %>, :<%= "#{arg}_updated_by" %>, :integer<% end %>
   end
 
   def self.down<% args.each do |arg| %>
