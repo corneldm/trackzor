@@ -3,7 +3,7 @@
 Add "trackzored" to your model. By convention, any attribute that also has [ATTR]_updated_at or [ATTR]_updated_by will be maintained.
 You can optionally specify :only and :except if this convention steps on your toes --
 :except => :status would skip the check and update of status_updated_at and status_updated_by.
-If [ATTR]_updated_by is present, it is required by a validator.
+If [ATTR]_updated_by is present, it is required by a validator. If acts_as_audited is present, trackzor-maintained columns will be added to non_audited_columns to prevent double-auditing.
 
 Use the trackzor_migration generator to quickly add columns:
   script/generate trackzor_migration User email phone_number

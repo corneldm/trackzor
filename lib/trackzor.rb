@@ -12,8 +12,14 @@ module Trackzor
         except |= Array(options[:except]).collect(&:to_s) if options[:except]
       end
 
-      (self.column_names - except).select{|column| column =~ /_updated_by/ }.each do |col|
-        belongs_to "#{col.split('_updated_by')[0]}_source".to_sym, :class_name => 'User', :foreign_key => col
+      aaa_present = self.respond_to?(:non_audited_columns)
+
+      (self.column_names - except).select{|column| column =~ /_updated_by|_updated_at/ }.each do |col|
+        if col =~ /_updated_by/
+          belongs_to "#{col.split('_updated_by')[0]}_source".to_sym, :class_name => 'User', :foreign_key => col
+        end
+
+        self.non_audited_columns << col if aaa_present
       end
 
       validate do |record|

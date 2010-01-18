@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{trackzor}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Cornelius"]
-  s.date = %q{2010-01-13}
+  s.date = %q{2010-01-18}
   s.description = %q{Track ATTR_updated_at and ATTR_updated_by}
   s.email = %q{david.cornelius@bluefishwireless.net}
   s.extra_rdoc_files = ["CHANGELOG", "README.rdoc", "lib/trackzor.rb"]
