@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('trackzor', '0.1.2') do |gem|
+Echoe.new('trackzor', '0.1.3') do |gem|
   gem.description = "Track ATTR_updated_at and ATTR_updated_by"
   gem.url = "http://github.com/corneldm/trackzor"
   gem.author = "David Cornelius"
