@@ -17,7 +17,7 @@ namespace :trackzor_merge do
   task :load => :environment do
     raise ArgumentError, "must provide target CLASS to merge into, FILE for sql dump, unique identifying column assumed to be id unless COLUMN is set" unless ENV['CLASS'] && ENV['FILE']
 
-    col = ENV['COLUMN'].downcase || 'id'
+    col = ENV['COLUMN'] || 'id'
     model = ENV['CLASS'].camelize.constantize
     merge_model = model.clone
     merge_model.table_name += MERGE_TABLE_SUFFIX

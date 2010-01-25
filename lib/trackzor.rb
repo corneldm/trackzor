@@ -120,7 +120,7 @@ module Trackzor
           other_time = other.updated_at
         end
 
-        if self_time.nil? || other_time > self_time
+        if self_time.nil? || (!other_time.nil? && other_time > self_time)
           self.send("#{tc}_updated_at=".to_sym, other_time) if has_updated_at_col
           self.send("#{tc}_updated_by=".to_sym, other.send("#{tc}_updated_by".to_sym)) if has_updated_by_col
           self.send("#{tc}=".to_sym, other.send(tc.to_sym))
