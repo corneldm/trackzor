@@ -77,7 +77,7 @@ module Trackzor
     end
 
     # update multiple attributes and force update of trackzored attributes
-    def update_or_touch_attributes!(new_attributes, guard_protected_attributes = true)
+    def will_update_attributes!(new_attributes, guard_protected_attributes = true)
       return if new_attributes.nil?
       attributes = new_attributes.dup
       attributes.stringify_keys!
