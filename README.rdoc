@@ -22,19 +22,3 @@ Or, if you're also using acts_as_audited, its as_user method is supported:
   end
 
 For each trackzored [ATTR]_updated_by column, a belongs_to association (:[ATTR]_source) is added to link to the user.
-
-== Sharing and Merging Tables
-
-Trackzor provides rake tasks for consolidating development databases.
-When using Trackzor as a gem, copy trackzor.rake from the gem's tasks directory to your application's tasks directory.
-
-Merging from Person A to Person B:
-  Person A: > rake trackzor_merge:dump TABLE=users
-            /path/printed/to/dump/users_for_merge.sql
-
-  Person B: > rake trackzor_merge:load CLASS=User FILE=users_for_merge.sql COLUMN=email
-            Merging joe@bob.com {:zip_code => ['12345', '54321']}
-            Creating new@guy.com
-            ...
-
-Trackzor will load the DB dump into a temporary table and merge data that is newer (based on ATTR_updated_at if available, otherwise updated_at).
